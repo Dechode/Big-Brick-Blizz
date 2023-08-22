@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://exut7d0wby5y"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_o2qc3"]
+[ext_resource type="PackedScene" uid="uid://fa4kilgqlxk7" path="res://block.tscn" id="2_8xd3i"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_o2qc3")
+
+[node name="Blocks" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Block6" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(224, 104)
+
+[node name="Block9" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(224, 184)
+
+[node name="Block16" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(928, 104)
+
+[node name="Block19" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(928, 184)
+
+[node name="Block25" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(824, 56)
+
+[node name="Block28" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(824, 232)
+
+[node name="Block29" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(328, 56)
+
+[node name="Block32" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(328, 232)
+
+[node name="Block34" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(432, 104)
+
+[node name="Block35" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(432, 184)
+
+[node name="Block38" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(728, 104)
+
+[node name="Block39" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(728, 184)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

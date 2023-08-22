@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://creh65k4xp3fp"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_n7yas"]
+[ext_resource type="Script" path="res://player_pad.gd" id="2_ktqfv"]
+[ext_resource type="PackedScene" uid="uid://exut7d0wby5y" path="res://levels/level_1.tscn" id="2_tfpa6"]
+[ext_resource type="PackedScene" uid="uid://kge5oxnubx34" path="res://ball.tscn" id="4_6js24"]
+[ext_resource type="PackedScene" uid="uid://dhnak51bg2864" path="res://main_menu.tscn" id="5_tftex"]
+
+[sub_resource type="Gradient" id="Gradient_qf8s2"]
+colors = PackedColorArray(0.301961, 0, 0.203922, 1, 0.301961, 0, 0.203922, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_n0gaq"]
+gradient = SubResource("Gradient_qf8s2")
+width = 1
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c0tce"]
+radius = 15.0
+height = 200.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hp3e3"]
+size = Vector2(1162, 96.999)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_n7yas")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainMenu" parent="CanvasLayer" instance=ExtResource("5_tftex")]
+
+[node name="Pad" type="CharacterBody2D" parent="."]
+position = Vector2(608, 576)
+collision_priority = 2.0
+motion_mode = 1
+script = ExtResource("2_ktqfv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pad"]
+texture = SubResource("GradientTexture1D_n0gaq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pad"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_c0tce")
+
+[node name="Boundaries" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boundaries"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D"]
+position = Vector2(571, -43)
+shape = SubResource("RectangleShape2D_hp3e3")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(-8, 736)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D3"]
+position = Vector2(571, -43.999)
+shape = SubResource("RectangleShape2D_hp3e3")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(1240, 728)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D4"]
+position = Vector2(563.37, -39.4984)
+shape = SubResource("RectangleShape2D_hp3e3")
+
+[node name="Area2D" type="Area2D" parent="Boundaries"]
+position = Vector2(0, 736)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Area2D"]
+position = Vector2(571, -43)
+shape = SubResource("RectangleShape2D_hp3e3")
+
+[node name="Level1" parent="." instance=ExtResource("2_tfpa6")]
+
+[node name="Ball" parent="." instance=ExtResource("4_6js24")]
+
+[connection signal="body_entered" from="Boundaries/Area2D" to="." method="_on_lose_area_entered"]

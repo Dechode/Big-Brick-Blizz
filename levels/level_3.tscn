@@ -1,0 +1,169 @@
+[gd_scene load_steps=6 format=3 uid="uid://hof7cfrijge2"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_o450o"]
+[ext_resource type="PackedScene" uid="uid://fa4kilgqlxk7" path="res://block.tscn" id="2_kxb6l"]
+
+[sub_resource type="Gradient" id="Gradient_jeq1l"]
+colors = PackedColorArray(0.809735, 0.305085, 0, 1, 1, 0.247059, 0.00392157, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_2xfv1"]
+seed = 275
+offset = Vector3(0, 2.15, 0)
+fractal_octaves = 10
+fractal_lacunarity = 4.41
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_wdl6x"]
+width = 128
+height = 128
+color_ramp = SubResource("Gradient_jeq1l")
+noise = SubResource("FastNoiseLite_2xfv1")
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_o450o")
+
+[node name="Blocks" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Block" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(96, 56)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(200, 56)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(304, 56)
+
+[node name="Block4" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(96, 130)
+
+[node name="Block5" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(200, 130)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block6" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(304, 130)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block7" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(96, 212)
+
+[node name="Block8" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(200, 212)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block9" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(304, 212)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block29" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(408, 56)
+
+[node name="Block30" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(408, 130)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block31" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(408, 212)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block33" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(512, 56)
+
+[node name="Block34" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(512, 130)
+
+[node name="Block35" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(512, 212)
+
+[node name="Block10" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(640, 56)
+
+[node name="Block11" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(744, 56)
+
+[node name="Block12" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(848, 56)
+
+[node name="Block13" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(640, 130)
+
+[node name="Block14" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(744, 130)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block15" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(848, 130)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block16" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(640, 212)
+
+[node name="Block17" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(744, 212)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block18" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(848, 212)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block32" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(952, 56)
+
+[node name="Block36" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(952, 130)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block37" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(952, 212)
+health = 200
+texture = SubResource("NoiseTexture2D_wdl6x")
+
+[node name="Block38" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(1056, 56)
+
+[node name="Block39" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(1056, 130)
+
+[node name="Block40" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(1056, 212)
+
+[node name="Block19" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(96, 296)
+
+[node name="Block20" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(200, 296)
+
+[node name="Block21" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(304, 296)
+
+[node name="Block41" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(408, 296)
+
+[node name="Block42" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(512, 296)
+
+[node name="Block22" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(640, 296)
+
+[node name="Block23" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(744, 296)
+
+[node name="Block24" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(848, 296)
+
+[node name="Block43" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(952, 296)
+
+[node name="Block44" parent="Blocks" instance=ExtResource("2_kxb6l")]
+position = Vector2(1056, 296)
