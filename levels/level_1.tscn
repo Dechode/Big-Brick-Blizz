@@ -16,16 +16,16 @@ position = Vector2(224, 104)
 position = Vector2(224, 184)
 
 [node name="Block16" parent="Blocks" instance=ExtResource("2_8xd3i")]
-position = Vector2(928, 104)
+position = Vector2(920, 104)
 
 [node name="Block19" parent="Blocks" instance=ExtResource("2_8xd3i")]
-position = Vector2(928, 184)
+position = Vector2(920, 184)
 
 [node name="Block25" parent="Blocks" instance=ExtResource("2_8xd3i")]
-position = Vector2(824, 56)
+position = Vector2(816, 56)
 
 [node name="Block28" parent="Blocks" instance=ExtResource("2_8xd3i")]
-position = Vector2(824, 232)
+position = Vector2(816, 232)
 
 [node name="Block29" parent="Blocks" instance=ExtResource("2_8xd3i")]
 position = Vector2(328, 56)
@@ -36,14 +36,32 @@ position = Vector2(328, 232)
 [node name="Block34" parent="Blocks" instance=ExtResource("2_8xd3i")]
 position = Vector2(432, 104)
 
+[node name="Block36" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(432, 144)
+
+[node name="Block40" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(224, 144)
+
+[node name="Block41" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(920, 144)
+
+[node name="Block42" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(622, 144)
+
+[node name="Block43" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(530, 144)
+
+[node name="Block37" parent="Blocks" instance=ExtResource("2_8xd3i")]
+position = Vector2(720, 144)
+
 [node name="Block35" parent="Blocks" instance=ExtResource("2_8xd3i")]
 position = Vector2(432, 184)
 
 [node name="Block38" parent="Blocks" instance=ExtResource("2_8xd3i")]
-position = Vector2(728, 104)
+position = Vector2(720, 104)
 
 [node name="Block39" parent="Blocks" instance=ExtResource("2_8xd3i")]
-position = Vector2(728, 184)
+position = Vector2(720, 184)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
