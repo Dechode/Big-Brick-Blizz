@@ -4,7 +4,7 @@ const level_1 = preload("res://levels/level_1.tscn")
 
 var current_level: PackedScene = null
 
-var level_count := 3
+var level_count := 4
 
 @onready var pad = $Pad
 @onready var ball = $Ball

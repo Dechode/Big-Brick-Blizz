@@ -1,17 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://creh65k4xp3fp"]
+[gd_scene load_steps=9 format=3 uid="uid://creh65k4xp3fp"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_n7yas"]
 [ext_resource type="Script" path="res://player_pad.gd" id="2_ktqfv"]
 [ext_resource type="PackedScene" uid="uid://exut7d0wby5y" path="res://levels/level_1.tscn" id="2_tfpa6"]
 [ext_resource type="PackedScene" uid="uid://kge5oxnubx34" path="res://ball.tscn" id="4_6js24"]
+[ext_resource type="Texture2D" uid="uid://dhcuvb4i24kqt" path="res://textures/pad.png" id="4_cbe4i"]
 [ext_resource type="PackedScene" uid="uid://dhnak51bg2864" path="res://main_menu.tscn" id="5_tftex"]
-
-[sub_resource type="Gradient" id="Gradient_qf8s2"]
-colors = PackedColorArray(0.301961, 0, 0.203922, 1, 0.301961, 0, 0.203922, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_n0gaq"]
-gradient = SubResource("Gradient_qf8s2")
-width = 1
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c0tce"]
 radius = 15.0
@@ -34,7 +28,9 @@ motion_mode = 1
 script = ExtResource("2_ktqfv")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pad"]
-texture = SubResource("GradientTexture1D_n0gaq")
+modulate = Color(0.878431, 0, 0.878431, 1)
+position = Vector2(4.85, 1.09)
+texture = ExtResource("4_cbe4i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pad"]
 rotation = 1.5708
