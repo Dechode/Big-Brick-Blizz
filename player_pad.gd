@@ -8,13 +8,9 @@ var key_input := 0.0
 
 
 func _ready() -> void:
-#	$CollisionShape2D.shape.size = size
 	$CollisionShape2D.shape.height = size.x
 	$CollisionShape2D.shape.radius = size.y * 0.5
-	$Sprite2D.scale = size
-	
 
-#func _process(delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
